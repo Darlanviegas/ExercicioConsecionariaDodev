@@ -8,6 +8,16 @@ namespace Exercicio_Concessionaria.Models
         private int Kilometragem { get; set; }
         private string Cor { get; set; }
         private double Valor { get; set; }
+
+        public Veiculo(string marca, string modelo, DateTime ano, int kilometragem, string cor, double valor)
+        {
+            SetMarca(marca);
+            SetModelo(modelo);
+            SetAno(ano);
+            SetKilometragem(kilometragem);
+            SetCor(cor);
+            SetValor(valor);
+        }
         public virtual double CalcularValor(double valor)
         {
             return valor;

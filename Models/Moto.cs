@@ -5,9 +5,24 @@ namespace Exercicio_Concessionaria.Models
         private int Cilindrada { get; set; }
         private string Partida { get; set; }
 
+        public Moto(string marca, string modelo, DateTime ano, int kilometragem, string cor, double valor, int cilindrada, string partida) : base(marca, modelo, ano, kilometragem, cor, valor)
+        {
+            SetCilindrada(cilindrada);
+            SetPartida(partida);
+        }
+
         public override double CalcularValor(double valor)
         {
-            return valor;
+            if (Partida == "Eletrica")
+            {
+                valor = (Cilindrada * 50) * 0.1;
+                return valor;
+            }
+            else
+            {
+                valor = (Cilindrada * 50);
+                return valor;
+            }
         }
 
         //Get e Set Cilindrada

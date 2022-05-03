@@ -5,8 +5,16 @@ namespace Exercicio_Concessionaria.Models
         private bool TransmissaoAutomatica { get; set; }
         private string Combustivel { get; set; }
 
+        public Carro(string marca, string modelo, DateTime ano, int kilometragem, string cor, double valor,bool transmissaoautomatica, string combustivel) : base(marca,modelo,ano,kilometragem,cor,valor)
+        {
+            SetTransmissaoAutomatica(transmissaoautomatica);
+            SetCombustivel(combustivel);
+        }
+
         public override double CalcularValor(double valor)
         {
+            if(TransmissaoAutomatica == true)
+            valor = (valor*0.2)+valor;
             return valor;
         }
 
