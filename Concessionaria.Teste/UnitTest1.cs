@@ -5,7 +5,7 @@ namespace Concessionaria.Teste
 {
     public class UnitTest1
     {   //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //Classe "Carro" do Projeto Concessionaria
+        //    Classe "Carro" do Projeto Concessionaria
         //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
         [Fact]
         public void SeATransmissaoForAutomaticaCalcularValorMaisVintePorCento()
@@ -27,7 +27,7 @@ namespace Concessionaria.Teste
             Assert.Equal(false, carro.GetTransmissaoAutomatica());
         }
         //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //Classe "Cliente" do Projeto Concessionaria
+        //    Classe "Cliente" do Projeto Concessionaria
         //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
         [Fact]
         public void ClienteDeveTerEmailValidoCadastrado()
@@ -38,25 +38,34 @@ namespace Concessionaria.Teste
             //Assert
             Assert.Equal("PedroPaulo@gmail.com", cliente.GetEmail());
         }
+        [Fact]
+        public void ClienteNãoDeveTerEmailNulloOuVazioCadastrado()
+        {   //Arrange
+            Cliente cliente = new Cliente("Pedro", "04658284032",DateTime.Now,"pedropaulo@gmail.com", "51998979495");
+            //Act
+            cliente.SetEmail(null);
+            //Assert
+            Assert.Equal(null, cliente.GetEmail());
+        }
 
         //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //Classe "Funcionário" do Projeto Concessionaria
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //Classe "Moto" do Projeto Concessionaria
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //Classe "Pessoa" do Projeto Concessionaria
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //Classe "Veículo" do Projeto Concessionaria
+        //    Classe "Funcionário" do Projeto Concessionaria
         //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
 
         //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //Classe "Venda" do Projeto Concessionaria
+        //    Classe "Moto" do Projeto Concessionaria
+        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        //    Classe "Pessoa" do Projeto Concessionaria
+        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        //    Classe "Veículo" do Projeto Concessionaria
+        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        //    Classe "Venda" do Projeto Concessionaria
         //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
         /*
         [Fact]
