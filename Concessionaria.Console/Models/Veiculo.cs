@@ -82,6 +82,7 @@ namespace Exercicio_Concessionaria.Models
         public void SetValor(double valor)
         {
             Valor = valor;
+            
         }
 
     }

@@ -10,7 +10,7 @@ namespace Exercicio_Concessionaria.Models
 
         public Venda(Cliente comprador, Funcionario vendedor, Veiculo veiculo, string formapagamento, double valorfinal)
         {
-            SetComprador (comprador);
+            SetComprador(comprador);
             SetVendedor(vendedor);
             SetVeiculo(veiculo);
             SetFormaPagamento(formapagamento);
@@ -18,13 +18,16 @@ namespace Exercicio_Concessionaria.Models
         }
 
         //Método para aplicar desconto
-        public void AplicarDesconto(double desconto)
-        {           
-            if (Vendedor.GetCargo() == "Gerente")
+        public double AplicarDesconto()
+        {
+            double valorVeiculo = Veiculo.GetValor();
+            string cargoFuncionario = "Gerente";
+            if (Vendedor.GetCargo().Contains(cargoFuncionario))
             {
-                desconto = ValorFinal * 0.95;
+                ValorFinal = valorVeiculo * 0.05;
+                
             }
-
+            return valorVeiculo;
         }
 
         //Get e Set Comprador
@@ -52,9 +55,9 @@ namespace Exercicio_Concessionaria.Models
         {
             return Veiculo;
         }
-        public void SetVeiculo(Veiculo Veiculo)
+        public void SetVeiculo(Veiculo veiculo)
         {
-            Veiculo = Veiculo;
+            Veiculo = veiculo;
         }
 
         //Get e Set FormaPagamento
