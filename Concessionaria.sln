@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioConcessionaria", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concessionaria.Teste", "Concessionaria.Teste\Concessionaria.Teste.csproj", "{EE24D5E2-5FFA-4396-84D4-802428DF92EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concessionaria.web", "Concessionaria.web\Concessionaria.web.csproj", "{81BB274D-8AAA-4F41-913A-BEE77301164C}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +46,17 @@ Global
 		{EE24D5E2-5FFA-4396-84D4-802428DF92EF}.Release|x64.Build.0 = Release|Any CPU
 		{EE24D5E2-5FFA-4396-84D4-802428DF92EF}.Release|x86.ActiveCfg = Release|Any CPU
 		{EE24D5E2-5FFA-4396-84D4-802428DF92EF}.Release|x86.Build.0 = Release|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Debug|x64.Build.0 = Debug|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Debug|x86.Build.0 = Debug|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|x64.ActiveCfg = Release|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|x64.Build.0 = Release|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|x86.ActiveCfg = Release|Any CPU
+		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
