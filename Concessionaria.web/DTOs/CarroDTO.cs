@@ -1,6 +1,6 @@
 namespace Concessionaria.web.DTOs
 {
-    public class CarroDTO
+    public class CarroDTO : VeiculoDTO
     {
         public bool TransmissaoAutomatica { get; set; }
         public string Combustivel { get; set; }

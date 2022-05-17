@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Concessionaria.web.DTOs;
+using Exercicio_Concessionaria.Models;
 namespace Concessionaria.web.Controllers{
     
     [ApiController]
@@ -14,9 +16,9 @@ namespace Concessionaria.web.Controllers{
         }
 
         [HttpPost("Set CarroNaLista")]
-        public IActionResult SetCarroNaLista(CarroDto carro)
-        {   var carro = new Carro(carroDTO.Marca,carroDTO.Modelo,carroDTO.Ano.ToString(),carroDTO.Kilometragem,carroDTO.Cor,carroDTO.Valor);
-            CarrosDaClasseDTO.Add(carroDTO);
+        public IActionResult SetCarroNaLista(CarroDTO carroDto)
+        {   var carro = new Carro(carroDto.Marca,carroDto.Modelo,carroDto.Ano,carroDto.Kilometragem,carroDto.Cor,carroDto.Valor,carroDto.TransmissaoAutomatica,carroDto.Combustivel);
+            CarrosDaClasseDTO.Add(carroDto);
             return Ok(CarrosDaClasseDTO);
         }
 

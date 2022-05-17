@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-
+using Concessionaria.web.DTOs;
+using Exercicio_Concessionaria.Models;
 namespace ProjetoConcessionaria.Web.Controllers
 {
     [ApiController]

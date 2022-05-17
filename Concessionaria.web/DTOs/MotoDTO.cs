@@ -1,6 +1,6 @@
 namespace Concessionaria.web.DTOs
 {
-    public class MotoDTO
+    public class MotoDTO : VeiculoDTO
     {
         public int Cilindrada { get; set; }
         public string Partida { get; set; }
