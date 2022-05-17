@@ -1,4 +1,5 @@
 using System;
+using Concessionaria.web.MyExceptions;
 namespace Exercicio_Concessionaria.Models
 {
     public class Carro : Veiculo
@@ -43,6 +44,21 @@ namespace Exercicio_Concessionaria.Models
         public void SetCombustivel(string combustivel)
         {
             Combustivel = combustivel;
+        }
+        public override bool ValidarValor(double valor)
+
+        {
+
+            if (valor >= 5000)
+
+            {
+
+                return true;
+
+            }
+
+            throw new ValidarInput("valor inválido!");
+
         }
 
     }

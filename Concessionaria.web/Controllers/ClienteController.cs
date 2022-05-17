@@ -6,26 +6,26 @@ namespace ProjetoConcessionaria.Web.Controllers
     [Route("[controller]")]
     public class ClienteController : ControllerBase
     {
-        public static List<Cliente> ClientesDaClasse { get; set; } = new List<Cliente>();
+        public static List<ClienteDTO> ClientesdaClasseDTO { get; set; } = new List<ClienteDTO>();
 
         [HttpGet("Get ClientesDaLista")]
         public IActionResult GetClientesDaLista()
         {
-            return Ok(ClientesDaClasse);
+            return Ok(ClientesdaClasseDTO);
         }
 
         [HttpPost("Set ClienteNaLista")]
-        public IActionResult SetClienteNaLista(Cliente cliente)
+        public IActionResult SetClienteNaLista(ClienteDTO cliente)
         {
-            ClientesDaClasse.Add(cliente);
-            return Ok(ClientesDaClasse);
+            ClientesdaClasseDTO.Add(cliente);
+            return Ok(ClientesdaClasseDTO);
         }
 
         [HttpDelete("Delete ClienteDaLista")]
         public IActionResult DeleteClienteDaLista()
         {
-            ClientesDaClasse.RemoveAt(ClientesDaClasse.Count - 1);
-            return Ok(ClientesDaClasse);
+            ClientesdaClasseDTO.RemoveAt(ClientesdaClasseDTO.Count - 1);
+            return Ok(ClientesdaClasseDTO);
         }
     }
 }

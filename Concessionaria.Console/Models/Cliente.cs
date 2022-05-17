@@ -20,7 +20,16 @@ namespace Exercicio_Concessionaria.Models
         }
         public void SetEmail(string email)
         {
+            ValidarEmail(email);
             Email = email;
+        }
+        public bool ValidarEmail(string email)
+        {
+            if (email.Contains("@"))
+            {
+                return true;
+            }
+            throw new ValidarInput("email inválido!");
         }
 
         //Get e Set Telefone
@@ -29,8 +38,8 @@ namespace Exercicio_Concessionaria.Models
             return Telefone;
         }
         public void SetTelefone(string telefone)
-        {            
-            if(ValidarTelefone(telefone)== false)
+        {
+            if (ValidarTelefone(telefone) == false)
             {
                 throw new ValidarInput("Telefone inválido");
             }
@@ -38,7 +47,7 @@ namespace Exercicio_Concessionaria.Models
         }
         public bool ValidarTelefone(string telefone)
         {
-            if (telefone.Length <9 && telefone.Length >14)
+            if (telefone.Length > 8 && telefone.Length < 15)
             {
                 return true;
             }

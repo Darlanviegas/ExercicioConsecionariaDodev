@@ -6,19 +6,19 @@ namespace ProjetoConcessionaria.Web.Controllers
     [Route("[controller]")]
     public class PessoaController : ControllerBase
     {
-        public static List<Pessoa> PessoasDaClasse { get; set; } = new List<Pessoa>();
+        public static List<PessoaDTO> PessoasDaClasseDTO { get; set; } = new List<PessoaDTO>();
 
         [HttpGet("Get PessoaDaClasse")]
         public IActionResult GetPessoaDaClasse()
         {
-            return Ok(PessoasDaClasse);
+            return Ok(PessoasDaClasseDTO);
         }
 
         [HttpPost("Set PessoaDaClasse")]
-        public IActionResult SetPessoaDaClasse(Pessoa pessoa)
+        public IActionResult SetPessoaDaClasse(PessoaDTO pessoa)
         {
-            PessoasDaClasse.Add(pessoa);
-            return Ok(PessoasDaClasse);
+            PessoasDaClasseDTO.Add(pessoa);
+            return Ok(PessoasDaClasseDTO);
         }
     }
 }

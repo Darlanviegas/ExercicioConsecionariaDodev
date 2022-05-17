@@ -1,4 +1,5 @@
 using System;
+using Concessionaria.web.MyExceptions;
 namespace Exercicio_Concessionaria.Models
 {
     public class Moto : Veiculo
@@ -44,6 +45,21 @@ namespace Exercicio_Concessionaria.Models
         public void SetPartida(string partida)
         {
             Partida = partida;
+        }
+        public override bool ValidarValor(double valor)
+
+        {
+
+            if (valor >= 2000)
+
+            {
+
+                return true;
+
+            }
+
+            throw new ValidarInput("valor inválido!");
+
         }
     }
 }

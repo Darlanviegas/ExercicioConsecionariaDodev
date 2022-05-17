@@ -5,26 +5,26 @@ namespace Concessionaria.web.Controllers{
     [Route("[controller]")]
     public class CarroController : ControllerBase
     {
-        public static List<Carro> CarrosDaClasse { get; set; } = new List<Carro>();
+        public static List<CarroDTO> CarrosDaClasseDTO { get; set; } = new List<CarroDTO>();
 
         [HttpGet("Get CarrosDaLista")]
         public IActionResult GetCarrosDaLista()
         {
-            return Ok(CarrosDaClasse);
+            return Ok(CarrosDaClasseDTO);
         }
 
         [HttpPost("Set CarroNaLista")]
         public IActionResult SetCarroNaLista(CarroDto carro)
-        {
-            CarrosDaClasse.Add(carro);
-            return Ok(CarrosDaClasse);
+        {   var carro = new Carro(carroDTO.Marca,carroDTO.Modelo,carroDTO.Ano.ToString(),carroDTO.Kilometragem,carroDTO.Cor,carroDTO.Valor);
+            CarrosDaClasseDTO.Add(carroDTO);
+            return Ok(CarrosDaClasseDTO);
         }
 
         [HttpDelete("Delete CarroDaLista")]
         public IActionResult DeleteCarroDaLista()
         {
-            CarrosDaClasse.RemoveAt(CarrosDaClasse.Count - 1);
-            return Ok(CarrosDaClasse);
+            CarrosDaClasseDTO.RemoveAt(CarrosDaClasseDTO.Count - 1);
+            return Ok(CarrosDaClasseDTO);
         }
     }
 }

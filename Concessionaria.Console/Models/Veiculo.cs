@@ -1,4 +1,5 @@
 using System;
+using Concessionaria.web.MyExceptions;
 namespace Exercicio_Concessionaria.Models
 {
     public class Veiculo
@@ -50,8 +51,23 @@ namespace Exercicio_Concessionaria.Models
             return Ano;
         }
         public void SetAno(DateTime ano)
-        {
+        {   ValidarAno(ano);
             Ano = ano;
+        }
+        public bool ValidarAno(DateTime ano)
+
+        {
+
+            if (ano.Year >= 2004 && ano.Year <= DateTime.Today.Year)
+
+            {
+
+                return true;
+
+            }
+
+            throw new ValidarInput("Ano inválido!");
+
         }
 
         //Get e Set Kilometragem
@@ -76,15 +92,24 @@ namespace Exercicio_Concessionaria.Models
 
         //Get e Set Valor
         public double GetValor()
-        {
+        {   
             return Valor;
         }
         public void SetValor(double valor)
-        {
+        {   ValidarValor(valor);
             Valor = valor;
-            
         }
+        public virtual bool ValidarValor(double valor)
 
+        {
+            if (valor >= 0)
+
+            {
+
+                return true;
+
+            }
+            throw new ValidarInput("valor inválido!");
+        }
     }
-
 }

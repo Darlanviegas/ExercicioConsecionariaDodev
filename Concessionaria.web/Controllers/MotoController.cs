@@ -6,26 +6,26 @@ namespace ProjetoConcessionaria.Web.Controllers
     [Route("[controller]")]
     public class MotoController : ControllerBase
     {
-        public static List<Moto> MotosDaClasse { get; set; } = new List<Moto>();
+        public static List<MotoDTO> MotosDaClasseDTO { get; set; } = new List<MotoDTO>();
 
         [HttpGet("Get MotosDaLista")]
         public IActionResult GetMotosDaLista()
         {
-            return Ok(MotosDaClasse);
+            return Ok(MotosDaClasseDTO);
         }
 
         [HttpPost("Set MotoNaLista")]
-        public IActionResult SetMotoNaLista(Moto moto)
+        public IActionResult SetMotoNaLista(MotoDTO moto)
         {
-            MotosDaClasse.Add(moto);
-            return Ok(MotosDaClasse);
+            MotosDaClasseDTO.Add(moto);
+            return Ok(MotosDaClasseDTO);
         }
 
         [HttpDelete("Delete MotoDaLista")]
         public IActionResult DeleteMotoDaLista()
         {
-            MotosDaClasse.RemoveAt(MotosDaClasse.Count - 1);
-            return Ok(MotosDaClasse);
+            MotosDaClasseDTO.RemoveAt(MotosDaClasseDTO.Count - 1);
+            return Ok(MotosDaClasseDTO);
         }
 
     }
