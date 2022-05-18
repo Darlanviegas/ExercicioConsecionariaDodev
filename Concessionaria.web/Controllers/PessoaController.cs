@@ -16,9 +16,9 @@ namespace ProjetoConcessionaria.Web.Controllers
         }
 
         [HttpPost("Set PessoaDaClasse")]
-        public IActionResult SetPessoaDaClasse(PessoaDTO pessoa)
-        {
-            PessoasDaClasseDTO.Add(pessoa);
+        public IActionResult SetPessoaDaClasse(PessoaDTO pessoaDto)
+        {   var pessoa1 = new Pessoa(pessoaDto.Nome,pessoaDto.Cpf,pessoaDto.DataNascimento);
+            PessoasDaClasseDTO.Add(pessoaDto);
             return Ok(PessoasDaClasseDTO);
         }
     }

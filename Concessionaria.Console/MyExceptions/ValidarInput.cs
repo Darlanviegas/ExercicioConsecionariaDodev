@@ -8,7 +8,7 @@ namespace Concessionaria.web.MyExceptions
         }
         public ValidarInput(string msg) : base(msg)
         {
-            throw new ValidarInput("");
+            
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Exercicio_Concessionaria.Models
         {
             SetCilindrada(cilindrada);
             SetPartida(partida);
+            SetValor(CalcularValor(valor));
         }
 
         public override double CalcularValor(double valor)

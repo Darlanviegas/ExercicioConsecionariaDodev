@@ -1,6 +1,6 @@
 namespace Concessionaria.web.DTOs
 {
-    public class FuncionarioDTO
+    public class FuncionarioDTO:PessoaDTO
     {
          public string Cargo { get; set; }
     }

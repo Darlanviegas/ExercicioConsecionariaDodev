@@ -16,9 +16,9 @@ namespace ProjetoConcessionaria.Web.Controllers
         }
 
         [HttpPost("Set MotoNaLista")]
-        public IActionResult SetMotoNaLista(MotoDTO moto)
-        {
-            MotosDaClasseDTO.Add(moto);
+        public IActionResult SetMotoNaLista(MotoDTO motoDto)
+        {   var moto1 = new Moto(motoDto.Marca,motoDto.Modelo,motoDto.Ano,motoDto.Kilometragem,motoDto.Cor,motoDto.Valor,motoDto.Cilindrada,motoDto.Partida);
+            MotosDaClasseDTO.Add(motoDto);
             return Ok(MotosDaClasseDTO);
         }
 
