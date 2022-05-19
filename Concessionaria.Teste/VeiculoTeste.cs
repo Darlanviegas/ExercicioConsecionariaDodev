@@ -6,9 +6,7 @@ namespace Concessionaria.Teste
 {
     public class VeiculoTeste
     {
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //+=+=+=+=+= Classe "Veículo" do Projeto Concessionaria +=+=+=+=+=+=+=+=+=+=+
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        
 
         [Fact]
         public void VeiculoDeveTerUmaMarcaValida()

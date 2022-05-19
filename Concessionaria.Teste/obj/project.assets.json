@@ -1671,9 +1671,22 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
+      "Concessionaria.Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Concessionaria.Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Concessionaria.Lib.dll": {}
+        }
+      },
       "ExercicioConcessionaria/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Concessionaria.Lib": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ExercicioConcessionaria.dll": {}
         },
@@ -5972,6 +5985,11 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Concessionaria.Lib/1.0.0": {
+      "type": "project",
+      "path": "../ProjetoConcessionaria.Lib/Concessionaria.Lib.csproj",
+      "msbuildProject": "../ProjetoConcessionaria.Lib/Concessionaria.Lib.csproj"
     },
     "ExercicioConcessionaria/1.0.0": {
       "type": "project",

@@ -6,9 +6,7 @@ namespace Concessionaria.Teste
 {
     public class VendaTeste
     {
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //+=+=+=+=+= Classe "Venda" do Projeto Concessionaria +=+=+=+=+=+=+=+=+=+=+=+
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        
 
         [Fact]
         public void AplicarDescontoDeCincoPorCentoSobreOValorFinalSeOCargoForGerente()

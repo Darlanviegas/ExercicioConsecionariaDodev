@@ -17,9 +17,19 @@ namespace ProjetoConcessionaria.Web.Controllers
 
         [HttpPost("Set FuncionarioNaLista")]
         public IActionResult SetFuncionarioNaLista(FuncionarioDTO funcionarioDto)
-        {   var funcionario1 = new Funcionario(funcionarioDto.Nome,funcionarioDto.Cpf,funcionarioDto.DataNascimento,funcionarioDto.Cargo);
-            FuncionariosDaClasseDTO.Add(funcionarioDto);
-            return Ok(FuncionariosDaClasseDTO);
+        {
+            try
+            {
+                var funcionario1 = new Funcionario(funcionarioDto.Nome, funcionarioDto.Cpf, funcionarioDto.DataNascimento, funcionarioDto.Cargo);
+                FuncionariosDaClasseDTO.Add(funcionarioDto);
+                return Ok(FuncionariosDaClasseDTO);
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [HttpDelete("Delete FuncionarioDaLista")]

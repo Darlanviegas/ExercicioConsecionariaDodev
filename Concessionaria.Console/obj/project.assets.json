@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Concessionaria.Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Concessionaria.Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Concessionaria.Lib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Concessionaria.Lib/1.0.0": {
+      "type": "project",
+      "path": "../ProjetoConcessionaria.Lib/Concessionaria.Lib.csproj",
+      "msbuildProject": "../ProjetoConcessionaria.Lib/Concessionaria.Lib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Concessionaria.Lib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Home\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Home\\Desktop\\Darlan\\Analise e Desenvolvimento\\DODEV\\Exercicio Concessionaria\\ProjetoConcessionaria.Lib\\Concessionaria.Lib.csproj": {
+              "projectPath": "C:\\Users\\Home\\Desktop\\Darlan\\Analise e Desenvolvimento\\DODEV\\Exercicio Concessionaria\\ProjetoConcessionaria.Lib\\Concessionaria.Lib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

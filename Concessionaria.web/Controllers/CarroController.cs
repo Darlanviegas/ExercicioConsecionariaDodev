@@ -17,9 +17,19 @@ namespace Concessionaria.web.Controllers{
 
         [HttpPost("Set CarroNaLista")]
         public IActionResult SetCarroNaLista(CarroDTO carroDto)
-        {   var carro = new Carro(carroDto.Marca,carroDto.Modelo,carroDto.Ano,carroDto.Kilometragem,carroDto.Cor,carroDto.Valor,carroDto.TransmissaoAutomatica,carroDto.Combustivel);
-            CarrosDaClasseDTO.Add(carroDto);
-            return Ok(CarrosDaClasseDTO);
+        {
+            try
+            {
+                var carro = new Carro(carroDto.Marca, carroDto.Modelo, carroDto.Ano, carroDto.Kilometragem, carroDto.Cor, carroDto.Valor, carroDto.TransmissaoAutomatica, carroDto.Combustivel);
+                CarrosDaClasseDTO.Add(carroDto);
+                return Ok(CarrosDaClasseDTO);
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+             
         }
 
         [HttpDelete("Delete CarroDaLista")]

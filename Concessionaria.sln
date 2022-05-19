@@ -1,18 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioConcessionaria", "Concessionaria.Console\ExercicioConcessionaria.csproj", "{C89D481B-5529-4DD0-B62D-2EBD640FCC90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioConcessionaria", "Concessionaria.Console\ExercicioConcessionaria.csproj", "{C89D481B-5529-4DD0-B62D-2EBD640FCC90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concessionaria.Teste", "Concessionaria.Teste\Concessionaria.Teste.csproj", "{EE24D5E2-5FFA-4396-84D4-802428DF92EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Concessionaria.Teste", "Concessionaria.Teste\Concessionaria.Teste.csproj", "{EE24D5E2-5FFA-4396-84D4-802428DF92EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concessionaria.web", "Concessionaria.web\Concessionaria.web.csproj", "{81BB274D-8AAA-4F41-913A-BEE77301164C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Concessionaria.web", "Concessionaria.web\Concessionaria.web.csproj", "{81BB274D-8AAA-4F41-913A-BEE77301164C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Concessionaria.Lib", "ProjetoConcessionaria.Lib\Concessionaria.Lib.csproj", "{2F292F8A-C437-4263-976C-E88BAB004108}"
 EndProject
 Global
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -58,5 +57,23 @@ Global
 		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|x64.Build.0 = Release|Any CPU
 		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|x86.ActiveCfg = Release|Any CPU
 		{81BB274D-8AAA-4F41-913A-BEE77301164C}.Release|x86.Build.0 = Release|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Debug|x64.Build.0 = Debug|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Debug|x86.Build.0 = Debug|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Release|x64.ActiveCfg = Release|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Release|x64.Build.0 = Release|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Release|x86.ActiveCfg = Release|Any CPU
+		{2F292F8A-C437-4263-976C-E88BAB004108}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F36107ED-1253-45EE-8D9C-36B9FC39FC29}
 	EndGlobalSection
 EndGlobal

@@ -4,11 +4,9 @@ using System;
 namespace Concessionaria.Teste
 {
     public class FuncionarioTeste
-    {          
+    {         
 
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //+=+=+=+=+= Classe "Funcionário" do Projeto Concessionaria +=+=+=+=+=+=+=+=+
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        
         [Fact]
         public void FuncionarioDeveTerCargoValidoCadastrado()
         {   //Arrange

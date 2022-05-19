@@ -17,9 +17,19 @@ namespace ProjetoConcessionaria.Web.Controllers
 
         [HttpPost("Set ClienteNaLista")]
         public IActionResult SetClienteNaLista(ClienteDTO clienteDto)
-        {   var cliente1 = new Cliente(clienteDto.Nome,clienteDto.Cpf,clienteDto.DataNascimento,clienteDto.Email,clienteDto.Telefone);
-            ClientesdaClasseDTO.Add(clienteDto);
-            return Ok(ClientesdaClasseDTO);
+        {
+            try
+            {
+                var cliente1 = new Cliente(clienteDto.Nome, clienteDto.Cpf, clienteDto.DataNascimento, clienteDto.Email, clienteDto.Telefone);
+                ClientesdaClasseDTO.Add(clienteDto);
+                return Ok(ClientesdaClasseDTO);
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+           
         }
 
         [HttpDelete("Delete ClienteDaLista")]

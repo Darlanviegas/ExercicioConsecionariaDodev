@@ -6,9 +6,7 @@ namespace Concessionaria.Teste
 {
     public class PessoaTeste
     {
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-        //+=+=+=+=+ Classe "Pessoa" do Projeto Concessionaria +=+=+=+=+=+=+=+=+=+=+=+
-        //+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        
         [Fact]
         public void PessoaDeveTerUmNomeCadastradoValido()
         {   //Arrange
